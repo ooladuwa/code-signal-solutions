@@ -1,4 +1,17 @@
 def knapsackLight(value1, weight1, value2, weight2, maxW):
+    #refactor
+    if weight1 + weight2 <= maxW:
+        return value1 + value2
+    else:
+        return (value1 if weight1 <= maxW else 0, value2 if weight2 <= maxW else 0)
+    
+    
+    
+    
+    
+    
+    
+    
     #where both weights are greater than max 
     if weight1 > maxW and weight2 > maxW:
         return 0
